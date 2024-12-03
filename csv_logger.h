@@ -15,6 +15,7 @@ class CSVLogger
 public:
     CSVLogger(const std::string& workspace, const std::string& package, const std::string& filename, const std::vector<std::string>& header)
     {
+        
         // Get current time
         std::time_t now = std::time(nullptr);
         std::tm* now_tm = std::localtime(&now);
@@ -41,7 +42,6 @@ public:
             else
             {
                 // Write the header to the CSV file
-                csv_file_ << "timestamp,topic";
                 for (const auto& col : header)
                 {
                     csv_file_ << "," << col;
@@ -63,13 +63,13 @@ public:
         }
     }
 
-    void writeCSV(const std::string& topic, const std::vector<double>& data)
+    void writeCSV(const std::vector<std::variant<std::string, double>>& data)
     {
         if (csv_file_.is_open())
         {
             for (const auto& value : data)
             {
-                csv_file_ << "," << value;
+                std::visit([&](auto&& arg) { csv_file_ << "," << arg; }, value);
             }
             csv_file_ << "\n";
         }
