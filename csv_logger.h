@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <variant>
 #include <fstream>
 #include <ros/ros.h>
 #include <boost/filesystem.hpp>
@@ -26,7 +27,7 @@ public:
         const char* home_dir = getenv("HOME");
         if (home_dir != nullptr)
         {
-            std::string base_path = std::string(home_dir) + "/" + workspace + "/csvLogs/" + package + "/" + timestamp.str();
+            std::string base_path = std::string(home_dir) + "/" + workspace + "/csvLogs/" + timestamp.str() + "/" + package;
             csv_path_ = base_path + "/" + filename + ".csv";
             ROS_INFO("CSV file will be saved in %s", csv_path_.c_str());
 
