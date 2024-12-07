@@ -1,47 +1,47 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <root>
  <tabbed_widget parent="main_window" name="Main Window">
-  <Tab containers="1" tab_name="X">
+  <Tab tab_name="X" containers="1">
    <Container>
-    <DockSplitter orientation="-" count="2" sizes="0.500578;0.499422">
+    <DockSplitter sizes="0.500578;0.499422" count="2" orientation="-">
      <DockArea name="Control Signal (Ux)">
-      <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-       <range right="42.660000" left="0.260000" bottom="-0.010277" top="0.366658"/>
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range top="0.460727" bottom="-15.860501" right="16.970000" left="0.000000"/>
        <limitY/>
-       <curve name="filtered_pose/x" color="#d62728"/>
-       <curve name="desired_trajectory/x" color="#1ac938"/>
+       <curve color="#d62728" name="filtered_pose/x"/>
+       <curve color="#1ac938" name="desired_trajectory/x"/>
       </plot>
      </DockArea>
-     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
-      <DockSplitter orientation="-" count="2" sizes="0.50116;0.49884">
+     <DockSplitter sizes="0.5;0.5" count="2" orientation="|">
+      <DockSplitter sizes="0.50116;0.49884" count="2" orientation="-">
        <DockArea name="Pose X (m)">
-        <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-         <range right="42.660000" left="0.260000" bottom="-0.105000" top="0.105000"/>
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range top="400.702944" bottom="-12.406714" right="16.970000" left="0.000000"/>
          <limitY/>
-         <curve name="u_control/ux" color="#1f77b4"/>
+         <curve color="#1f77b4" name="u_control/ux"/>
         </plot>
        </DockArea>
        <DockArea name="Pitch (rad)">
-        <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-         <range right="42.660000" left="0.260000" bottom="-0.103912" top="0.104330"/>
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range top="0.080726" bottom="-1.473608" right="16.970000" left="0.000000"/>
          <limitY/>
-         <curve name="filtered_pose/theta" color="#ff7f0e"/>
+         <curve color="#ff7f0e" name="filtered_pose/theta"/>
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter orientation="-" count="2" sizes="0.50116;0.49884">
+      <DockSplitter sizes="0.50116;0.49884" count="2" orientation="-">
        <DockArea name="Velocity x (m/s)">
-        <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-         <range right="42.660000" left="0.260000" bottom="-0.322549" top="0.324674"/>
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range top="6.449361" bottom="-35.669531" right="16.970000" left="0.000000"/>
          <limitY/>
-         <curve name="filtered_pose/dx" color="#1ac938"/>
+         <curve color="#1ac938" name="filtered_pose/dx"/>
         </plot>
        </DockArea>
        <DockArea name="Angular Velocity Pitch (rad/s)">
-        <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-         <range right="42.660000" left="0.260000" bottom="-1.517837" top="1.518227"/>
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range top="5.576576" bottom="-5.475146" right="16.970000" left="0.000000"/>
          <limitY/>
-         <curve name="filtered_pose/dtheta" color="#f14cc1"/>
+         <curve color="#f14cc1" name="filtered_pose/dtheta"/>
         </plot>
        </DockArea>
       </DockSplitter>
@@ -49,47 +49,47 @@
     </DockSplitter>
    </Container>
   </Tab>
-  <Tab containers="1" tab_name="Y">
+  <Tab tab_name="Y" containers="1">
    <Container>
-    <DockSplitter orientation="-" count="2" sizes="0.463584;0.536416">
+    <DockSplitter sizes="0.463584;0.536416" count="2" orientation="-">
      <DockArea name="...">
-      <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-       <range right="42.660000" left="0.260000" bottom="-0.013453" top="0.321929"/>
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range top="10.066058" bottom="-28.336548" right="16.970000" left="0.000000"/>
        <limitY/>
-       <curve name="desired_trajectory/y" color="#ff7f0e"/>
-       <curve name="filtered_pose/y" color="#f14cc1"/>
+       <curve color="#ff7f0e" name="desired_trajectory/y"/>
+       <curve color="#f14cc1" name="filtered_pose/y"/>
       </plot>
      </DockArea>
-     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
-      <DockSplitter orientation="-" count="2" sizes="0.50108;0.49892">
+     <DockSplitter sizes="0.5;0.5" count="2" orientation="|">
+      <DockSplitter sizes="0.50108;0.49892" count="2" orientation="-">
        <DockArea name="...">
-        <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-         <range right="42.660000" left="0.260000" bottom="-0.105000" top="0.105000"/>
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range top="44.505182" bottom="-159.609882" right="16.970000" left="0.000000"/>
          <limitY/>
-         <curve name="u_control/uy" color="#9467bd"/>
+         <curve color="#9467bd" name="u_control/uy"/>
         </plot>
        </DockArea>
        <DockArea name="...">
-        <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-         <range right="42.660000" left="0.260000" bottom="-0.104196" top="0.104382"/>
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range top="1.344869" bottom="-1.220429" right="16.970000" left="0.000000"/>
          <limitY/>
-         <curve name="filtered_pose/roll_angle" color="#bcbd22"/>
+         <curve color="#1f77b4" name="filtered_pose/roll"/>
         </plot>
        </DockArea>
       </DockSplitter>
-      <DockSplitter orientation="-" count="2" sizes="0.50108;0.49892">
+      <DockSplitter sizes="0.50108;0.49892" count="2" orientation="-">
        <DockArea name="...">
-        <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-         <range right="42.660000" left="0.260000" bottom="-0.320671" top="0.323215"/>
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range top="23.341425" bottom="-19.209825" right="16.970000" left="0.000000"/>
          <limitY/>
-         <curve name="filtered_pose/dy" color="#17becf"/>
+         <curve color="#17becf" name="filtered_pose/dy"/>
         </plot>
        </DockArea>
        <DockArea name="...">
-        <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-         <range right="42.660000" left="0.260000" bottom="-0.404246" top="0.406107"/>
+        <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+         <range top="5.715222" bottom="-5.855012" right="16.970000" left="0.000000"/>
          <limitY/>
-         <curve name="filtered_pose/droll" color="#1f77b4"/>
+         <curve color="#1f77b4" name="filtered_pose/droll"/>
         </plot>
        </DockArea>
       </DockSplitter>
@@ -97,60 +97,60 @@
     </DockSplitter>
    </Container>
   </Tab>
-  <Tab containers="1" tab_name="Z">
+  <Tab tab_name="Z" containers="1">
    <Container>
-    <DockSplitter orientation="-" count="2" sizes="0.500578;0.499422">
+    <DockSplitter sizes="0.500578;0.499422" count="2" orientation="-">
      <DockArea name="...">
-      <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-       <range right="42.660000" left="0.260000" bottom="-0.031771" top="1.302611"/>
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range top="26.443622" bottom="-0.605308" right="16.970000" left="0.000000"/>
        <limitY/>
-       <curve name="desired_trajectory/z" color="#1ac938"/>
-       <curve name="filtered_pose/z" color="#ff7f0e"/>
+       <curve color="#1ac938" name="desired_trajectory/z"/>
+       <curve color="#ff7f0e" name="filtered_pose/z"/>
       </plot>
      </DockArea>
-     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
+     <DockSplitter sizes="0.5;0.5" count="2" orientation="|">
       <DockArea name="...">
-       <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-        <range right="42.660000" left="0.260000" bottom="-0.105000" top="0.105000"/>
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range top="21.163652" bottom="-521.214772" right="16.970000" left="0.000000"/>
         <limitY/>
-        <curve name="u_control/uz" color="#d62728"/>
+        <curve color="#d62728" name="u_control/uz"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-        <range right="42.660000" left="0.260000" bottom="-0.237666" top="0.740718"/>
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range top="40.996555" bottom="-2.979734" right="16.970000" left="0.000000"/>
         <limitY/>
-        <curve name="filtered_pose/dz" color="#f14cc1"/>
+        <curve color="#f14cc1" name="filtered_pose/dz"/>
        </plot>
       </DockArea>
      </DockSplitter>
     </DockSplitter>
    </Container>
   </Tab>
-  <Tab containers="1" tab_name="YAW">
+  <Tab tab_name="YAW" containers="1">
    <Container>
-    <DockSplitter orientation="-" count="2" sizes="0.500578;0.499422">
+    <DockSplitter sizes="0.500578;0.499422" count="2" orientation="-">
      <DockArea name="...">
-      <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-       <range right="42.660000" left="0.260000" bottom="-0.008792" top="0.338335"/>
+      <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+       <range top="3.131580" bottom="-16.712990" right="16.970000" left="0.000000"/>
        <limitY/>
-       <curve name="desired_trajectory/yaw_angle" color="#9467bd"/>
-       <curve name="filtered_pose/yaw_angle" color="#17becf"/>
+       <curve color="#d62728" name="filtered_pose/yaw"/>
+       <curve color="#1ac938" name="u_control/uyaw"/>
       </plot>
      </DockArea>
-     <DockSplitter orientation="|" count="2" sizes="0.5;0.5">
+     <DockSplitter sizes="0.5;0.5" count="2" orientation="|">
       <DockArea name="...">
-       <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-        <range right="42.660000" left="0.260000" bottom="-0.525000" top="0.525000"/>
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range top="0.890575" bottom="-16.658331" right="16.970000" left="0.000000"/>
         <limitY/>
-        <curve name="u_control/uyaw" color="#bcbd22"/>
+        <curve color="#bcbd22" name="u_control/uyaw"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" flip_x="false" mode="TimeSeries" style="Lines">
-        <range right="42.660000" left="0.260000" bottom="-0.324421" top="0.334065"/>
+       <plot flip_x="false" flip_y="false" mode="TimeSeries" style="Lines">
+        <range top="2.256377" bottom="-5.589517" right="16.970000" left="0.000000"/>
         <limitY/>
-        <curve name="filtered_pose/dyaw" color="#1f77b4"/>
+        <curve color="#1f77b4" name="filtered_pose/dyaw"/>
        </plot>
       </DockArea>
      </DockSplitter>
