@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+ <tabbed_widget name="Main Window" parent="main_window">
+  <Tab containers="1" tab_name="X">
+   <Container>
+    <DockSplitter sizes="0.25029;0.25029;0.249131;0.25029" orientation="-" count="4">
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.004852" right="1736640557.564378" top="0.009356"/>
+       <limitY/>
+       <curve color="#1f77b4" name="u_control/ux"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.308352" right="1736640557.564378" top="0.042434"/>
+       <limitY/>
+       <curve color="#d62728" name="filtered_pose_est/x"/>
+       <curve color="#1ac938" name="ground_truth/x"/>
+       <curve color="#1ac938" name="desired_trajectory/x"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.206983" right="1736640557.564378" top="0.152941"/>
+       <limitY/>
+       <curve color="#17becf" name="error/ex"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-457.705530" right="1736640557.564378" top="94.784730"/>
+       <limitY/>
+       <curve color="#d62728" name="error/int_ex"/>
+      </plot>
+     </DockArea>
+    </DockSplitter>
+   </Container>
+  </Tab>
+  <Tab containers="1" tab_name="Y">
+   <Container>
+    <DockSplitter sizes="0.25029;0.25029;0.249131;0.25029" orientation="-" count="4">
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.013960" right="1736640557.564378" top="0.019839"/>
+       <limitY/>
+       <curve color="#17becf" name="u_control/uy"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.040714" right="1736640557.564378" top="0.308310"/>
+       <limitY/>
+       <curve color="#bcbd22" name="filtered_pose_est/y"/>
+       <curve color="#1f77b4" name="ground_truth/y"/>
+       <curve color="#1f77b4" name="desired_trajectory/y"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.026608" right="1736640557.564378" top="0.308814"/>
+       <limitY/>
+       <curve color="#ff7f0e" name="error/ey"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-10.292695" right="1736640557.564378" top="394.271480"/>
+       <limitY/>
+       <curve color="#f14cc1" name="error/int_ey"/>
+      </plot>
+     </DockArea>
+    </DockSplitter>
+   </Container>
+  </Tab>
+  <Tab containers="1" tab_name="Z">
+   <Container>
+    <DockSplitter sizes="0.25029;0.25029;0.249131;0.25029" orientation="-" count="4">
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.020884" right="1736640557.564378" top="0.035323"/>
+       <limitY/>
+       <curve color="#ff7f0e" name="u_control/uz"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="0.934508" right="1736640557.564378" top="1.285251"/>
+       <limitY/>
+       <curve color="#f14cc1" name="ground_truth/z"/>
+       <curve color="#9467bd" name="filtered_pose_est/z"/>
+       <curve color="#bcbd22" name="desired_trajectory/z"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.084323" right="1736640557.564378" top="0.227411"/>
+       <limitY/>
+       <curve color="#9467bd" name="error/ez"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="378.806125" right="1736640557.564378" top="526.388875"/>
+       <limitY/>
+       <curve color="#17becf" name="error/int_ez"/>
+      </plot>
+     </DockArea>
+    </DockSplitter>
+   </Container>
+  </Tab>
+  <Tab containers="1" tab_name="YAW">
+   <Container>
+    <DockSplitter sizes="0.25029;0.25029;0.249131;0.25029" orientation="-" count="4">
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.041942" right="1736640557.564378" top="0.026812"/>
+       <limitY/>
+       <curve color="#bcbd22" name="u_control/uyaw"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.022765" right="1736640557.564378" top="0.045413"/>
+       <limitY/>
+       <curve color="#1f77b4" name="filtered_pose_est/yaw"/>
+       <curve color="#d62728" name="ground_truth/yaw"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.122302" right="1736640557.564378" top="0.158704"/>
+       <limitY/>
+       <curve color="#1ac938" name="filtered_pose_est/dyaw"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-1.304368" right="1736640557.564378" top="2.601969"/>
+       <limitY/>
+       <curve color="#ff7f0e" name="yaw_degree"/>
+      </plot>
+     </DockArea>
+    </DockSplitter>
+   </Container>
+  </Tab>
+  <Tab containers="1" tab_name="Xb">
+   <Container>
+    <DockSplitter sizes="0.333333;0.333333;0.333333" orientation="-" count="3">
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.004852" right="1736640557.564378" top="0.009356"/>
+       <limitY/>
+       <curve color="#17becf" name="u_control/ux"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.250651" right="1736640557.564378" top="0.041011"/>
+       <limitY/>
+       <curve color="#1f77b4" name="x_body"/>
+       <curve color="#ff7f0e" name="x_body_gt"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.030211" right="1736640557.564378" top="0.031986"/>
+       <limitY/>
+       <curve color="#1f77b4" name="dx_body"/>
+      </plot>
+     </DockArea>
+    </DockSplitter>
+   </Container>
+  </Tab>
+  <Tab containers="1" tab_name="Yb">
+   <Container>
+    <DockSplitter sizes="0.333333;0.333333;0.333333" orientation="-" count="3">
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.013960" right="1736640557.564378" top="0.019839"/>
+       <limitY/>
+       <curve color="#f14cc1" name="u_control/uy"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.027724" right="1736640557.564378" top="0.137740"/>
+       <limitY/>
+       <curve color="#d62728" name="y_body"/>
+       <curve color="#f14cc1" name="y_body_gt"/>
+      </plot>
+     </DockArea>
+     <DockArea name="...">
+      <plot flip_y="false" mode="TimeSeries" style="Lines" flip_x="false">
+       <range left="1736640400.995318" bottom="-0.115988" right="1736640557.564378" top="0.085982"/>
+       <limitY/>
+       <curve color="#1ac938" name="dy_body"/>
+      </plot>
+     </DockArea>
+    </DockSplitter>
+   </Container>
+  </Tab>
+  <currentTabIndex index="2"/>
+ </tabbed_widget>
+ <use_relative_time_offset enabled="0"/>
+ <!-- - - - - - - - - - - - - - - -->
+ <!-- - - - - - - - - - - - - - - -->
+ <Plugins>
+  <plugin ID="DataLoad CSV">
+   <parameters time_axis="timestamp" delimiter="0"/>
+  </plugin>
+  <plugin ID="DataLoad MCAP"/>
+  <plugin ID="DataLoad ROS2 bags">
+   <use_header_stamp value="false"/>
+   <discard_large_arrays value="true"/>
+   <max_array_size value="100"/>
+   <boolean_strings_to_number value="true"/>
+   <remove_suffix_from_strings value="true"/>
+   <selected_topics value=""/>
+  </plugin>
+  <plugin ID="DataLoad ULog"/>
+  <plugin ID="MQTT Subscriber (Mosquitto)"/>
+  <plugin ID="ROS2 Topic Subscriber">
+   <use_header_stamp value="false"/>
+   <discard_large_arrays value="true"/>
+   <max_array_size value="100"/>
+   <boolean_strings_to_number value="true"/>
+   <remove_suffix_from_strings value="true"/>
+   <selected_topics value=""/>
+  </plugin>
+  <plugin ID="UDP Server"/>
+  <plugin ID="WebSocket Server"/>
+  <plugin ID="ZMQ Subscriber"/>
+  <plugin ID="Fast Fourier Transform"/>
+  <plugin ID="Quaternion to RPY"/>
+  <plugin ID="Reactive Script Editor">
+   <library code="--[[ Helper function to create a series from arrays&#xa;&#xa; new_series: a series previously created with ScatterXY.new(name)&#xa; prefix:     prefix of the timeseries, before the index of the array&#xa; suffix_X:   suffix to complete the name of the series containing the X value. If [nil], use the index of the array.&#xa; suffix_Y:   suffix to complete the name of the series containing the Y value&#xa; timestamp:   usually the tracker_time variable&#xa;              &#xa; Example:&#xa; &#xa; Assuming we have multiple series in the form:&#xa; &#xa;   /trajectory/node.{X}/position/x&#xa;   /trajectory/node.{X}/position/y&#xa;   &#xa; where {N} is the index of the array (integer). We can create a reactive series from the array with:&#xa; &#xa;   new_series = ScatterXY.new(&quot;my_trajectory&quot;) &#xa;   CreateSeriesFromArray( new_series, &quot;/trajectory/node&quot;, &quot;position/x&quot;, &quot;position/y&quot;, tracker_time );&#xa;--]]&#xa;&#xa;function CreateSeriesFromArray( new_series, prefix, suffix_X, suffix_Y, timestamp )&#xa;  &#xa;  --- clear previous values&#xa;  new_series:clear()&#xa;  &#xa;  --- Append points to new_series&#xa;  index = 0&#xa;  while(true) do&#xa;&#xa;    x = index;&#xa;    -- if not nil, get the X coordinate from a series&#xa;    if suffix_X ~= nil then &#xa;      series_x = TimeseriesView.find( string.format( &quot;%s.%d/%s&quot;, prefix, index, suffix_X) )&#xa;      if series_x == nil then break end&#xa;      x = series_x:atTime(timestamp)&#x9; &#xa;    end&#xa;    &#xa;    series_y = TimeseriesView.find( string.format( &quot;%s.%d/%s&quot;, prefix, index, suffix_Y) )&#xa;    if series_y == nil then break end &#xa;    y = series_y:atTime(timestamp)&#xa;    &#xa;    new_series:push_back(x,y)&#xa;    index = index+1&#xa;  end&#xa;end&#xa;&#xa;--[[ Similar to the built-in function GetSeriesNames(), but select only the names with a give prefix. --]]&#xa;&#xa;function GetSeriesNamesByPrefix(prefix)&#xa;  -- GetSeriesNames(9 is a built-in function&#xa;  all_names = GetSeriesNames()&#xa;  filtered_names = {}&#xa;  for i, name in ipairs(all_names)  do&#xa;    -- check the prefix&#xa;    if name:find(prefix, 1, #prefix) then&#xa;      table.insert(filtered_names, name);&#xa;    end&#xa;  end&#xa;  return filtered_names&#xa;end&#xa;&#xa;--[[ Modify an existing series, applying offsets to all their X and Y values&#xa;&#xa; series: an existing timeseries, obtained with TimeseriesView.find(name)&#xa; delta_x: offset to apply to each x value&#xa; delta_y: offset to apply to each y value &#xa;  &#xa;--]]&#xa;&#xa;function ApplyOffsetInPlace(series, delta_x, delta_y)&#xa;  -- use C++ indeces, not Lua indeces&#xa;  for index=0, series:size()-1 do&#xa;    x,y = series:at(index)&#xa;    series:set(index, x + delta_x, y + delta_y)&#xa;  end&#xa;end&#xa;"/>
+   <scripts/>
+  </plugin>
+  <plugin ID="CSV Exporter"/>
+  <plugin ID="ROS2 Topic Re-Publisher"/>
+ </Plugins>
+ <!-- - - - - - - - - - - - - - - -->
+ <!-- - - - - - - - - - - - - - - -->
+ <customMathEquations>
+  <snippet name="dy_body">
+   <global></global>
+   <function>return -v2*math.sin(value) + v1*math.cos(value)</function>
+   <linked_source>filtered_pose_est/yaw</linked_source>
+   <additional_sources>
+    <v1>filtered_pose_est/dy</v1>
+    <v2>filtered_pose_est/dx</v2>
+   </additional_sources>
+  </snippet>
+  <snippet name="dx_body">
+   <global></global>
+   <function>return v2*math.cos(value) + v1*math.sin(value)</function>
+   <linked_source>filtered_pose_est/yaw</linked_source>
+   <additional_sources>
+    <v1>filtered_pose_est/dy</v1>
+    <v2>filtered_pose_est/dx</v2>
+   </additional_sources>
+  </snippet>
+  <snippet name="yaw_degree">
+   <global></global>
+   <function>return value*180/3.14159</function>
+   <linked_source>filtered_pose_est/yaw</linked_source>
+  </snippet>
+  <snippet name="y_body_gt">
+   <global></global>
+   <function>return -v2*math.sin(value) + v1*math.cos(value)</function>
+   <linked_source>ground_truth/yaw</linked_source>
+   <additional_sources>
+    <v1>ground_truth/y</v1>
+    <v2>ground_truth/x</v2>
+   </additional_sources>
+  </snippet>
+  <snippet name="roll_degree">
+   <global></global>
+   <function>return value*180/3.14159</function>
+   <linked_source>filtered_pose_est/roll</linked_source>
+  </snippet>
+  <snippet name="x_body_gt">
+   <global></global>
+   <function>return v2*math.cos(value) + v1*math.sin(value)</function>
+   <linked_source>ground_truth/yaw</linked_source>
+   <additional_sources>
+    <v1>ground_truth/y</v1>
+    <v2>ground_truth/x</v2>
+   </additional_sources>
+  </snippet>
+  <snippet name="theta_degree">
+   <global></global>
+   <function>return value*180/3.14159</function>
+   <linked_source>filtered_pose_est/theta</linked_source>
+  </snippet>
+  <snippet name="x_body">
+   <global></global>
+   <function>return v2*math.cos(value) + v1*math.sin(value)</function>
+   <linked_source>filtered_pose_est/yaw</linked_source>
+   <additional_sources>
+    <v1>filtered_pose_est/y</v1>
+    <v2>filtered_pose_est/x</v2>
+   </additional_sources>
+  </snippet>
+  <snippet name="y_body">
+   <global></global>
+   <function>return -v2*math.sin(value) + v1*math.cos(value)</function>
+   <linked_source>filtered_pose_est/yaw</linked_source>
+   <additional_sources>
+    <v1>filtered_pose_est/y</v1>
+    <v2>filtered_pose_est/x</v2>
+   </additional_sources>
+  </snippet>
+  <snippet name="x_w_yaw0">
+   <global></global>
+   <function>return v2*math.cos(value) - v1*math.sin(value)</function>
+   <linked_source>ground_truth/yaw</linked_source>
+   <additional_sources>
+    <v1>ground_truth/y</v1>
+    <v2>ground_truth/x</v2>
+   </additional_sources>
+  </snippet>
+  <snippet name="y_w_yaw0">
+   <global></global>
+   <function>return v2*math.sin(value) + v1*math.cos(value)</function>
+   <linked_source>ground_truth/yaw</linked_source>
+   <additional_sources>
+    <v1>ground_truth/y</v1>
+    <v2>ground_truth/x</v2>
+   </additional_sources>
+  </snippet>
+ </customMathEquations>
+ <snippets/>
+ <!-- - - - - - - - - - - - - - - -->
+</root>
+
