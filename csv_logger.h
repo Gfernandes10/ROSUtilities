@@ -5,18 +5,17 @@
 #include <vector>
 #include <variant>
 #include <fstream>
-#include <ros/ros.h>
 #include <boost/filesystem.hpp>
 #include <ctime>
 #include <iomanip>
 #include <sstream>
+#include <iostream>
 
 class CSVLogger
 {
 public:
     CSVLogger(const std::string& workspace, const std::string& package, const std::string& filename, const std::vector<std::string>& header)
     {
-        
         // Get current time
         std::time_t now = std::time(nullptr);
         std::tm* now_tm = std::localtime(&now);
@@ -29,7 +28,7 @@ public:
         {
             std::string base_path = std::string(home_dir) + "/" + workspace + "/csvLogs/" + timestamp.str() + "/" + package;
             csv_path_ = base_path + "/" + filename + ".csv";
-            ROS_INFO("CSV file will be saved in %s", csv_path_.c_str());
+            std::cout << "[CSVLogger] CSV file will be saved in " << csv_path_ << std::endl;
 
             // Create directories if they do not exist
             boost::filesystem::create_directories(base_path);
@@ -38,7 +37,7 @@ public:
             csv_file_.open(csv_path_);
             if (!csv_file_.is_open())
             {
-                ROS_ERROR("Failed to open CSV file at %s", csv_path_.c_str());
+                std::cerr << "[CSVLogger] Failed to open CSV file at " << csv_path_ << std::endl;
             }
             else
             {
@@ -52,7 +51,7 @@ public:
         }
         else
         {
-            ROS_ERROR("Failed to get HOME environment variable");
+            std::cerr << "[CSVLogger] Failed to get HOME environment variable" << std::endl;
         }
     }
 
