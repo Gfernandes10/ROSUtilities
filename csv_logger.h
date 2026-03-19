@@ -10,6 +10,7 @@
 #include <iomanip>
 #include <sstream>
 #include <iostream>
+#include <mutex>
 
 class CSVLogger
 {
@@ -41,12 +42,13 @@ public:
             }
             else
             {
-                // Write the header to the CSV file
+                // Write header as a full line, then flush.
+                std::ostringstream row;
                 for (const auto& col : header)
                 {
-                    csv_file_ << "," << col;
+                    row << "," << col;
                 }
-                csv_file_ << "\n";
+                write_line_locked_(row.str());
             }
         }
         else
@@ -57,27 +59,47 @@ public:
 
     ~CSVLogger()
     {
+        std::lock_guard<std::mutex> lock(csv_mutex_);
         if (csv_file_.is_open())
         {
+            csv_file_.flush();
             csv_file_.close();
         }
     }
 
     void writeCSV(const std::vector<std::variant<std::string, double>>& data)
     {
-        if (csv_file_.is_open())
+        std::ostringstream row;
+        for (const auto& value : data)
         {
-            for (const auto& value : data)
-            {
-                std::visit([&](auto&& arg) { csv_file_ << "," << arg; }, value);
-            }
-            csv_file_ << "\n";
+            std::visit([&](auto&& arg) { row << "," << arg; }, value);
         }
+
+        std::lock_guard<std::mutex> lock(csv_mutex_);
+        write_line_locked_(row.str());
     }
 
 private:
+    void write_line_locked_(const std::string& row)
+    {
+        if (!csv_file_.is_open())
+        {
+            return;
+        }
+
+        csv_file_ << row << "\n";
+        // Ensures last complete line reaches the file even on normal Ctrl+C shutdown.
+        csv_file_.flush();
+
+        if (!csv_file_.good())
+        {
+            std::cerr << "[CSVLogger] Write failed for " << csv_path_ << std::endl;
+        }
+    }
+
     std::string csv_path_;
     std::ofstream csv_file_;
+    std::mutex csv_mutex_;
 };
 
 #endif // CSV_LOGGER_H
