@@ -17,17 +17,20 @@ class CSVLogger
 public:
     CSVLogger(const std::string& workspace, const std::string& package, const std::string& filename, const std::vector<std::string>& header)
     {
+        static_cast<void>(package);
         // Get current time
         std::time_t now = std::time(nullptr);
         std::tm* now_tm = std::localtime(&now);
         std::ostringstream timestamp;
         timestamp << std::put_time(now_tm, "%Y%m%d_%H%M");
 
-        // Construct the absolute path for the CSV file with timestamp
+        // Construct the absolute path for the CSV file with timestamp.
+        // All packages now write directly into the timestamp directory so each
+        // experiment keeps a flat CSV set.
         const char* home_dir = getenv("HOME");
         if (home_dir != nullptr)
         {
-            std::string base_path = std::string(home_dir) + "/" + workspace + "/csvLogs/" + timestamp.str() + "/" + package;
+            std::string base_path = std::string(home_dir) + "/" + workspace + "/csvLogs/" + timestamp.str();
             csv_path_ = base_path + "/" + filename + ".csv";
             std::cout << "[CSVLogger] CSV file will be saved in " << csv_path_ << std::endl;
 
